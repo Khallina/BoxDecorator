@@ -1,5 +1,5 @@
 import java.awt.*;
-
+/*
 public class Eye extends Decorator {
     private int x, y;
 
@@ -18,3 +18,4 @@ public class Eye extends Decorator {
     }
 }
 }
+*/

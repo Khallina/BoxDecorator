@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.beans.PropertyChangeSupport;
-import java.beans.PropertyChangeListener;
 
 public class Main extends JFrame {
     Screen screen;
@@ -10,7 +8,7 @@ public class Main extends JFrame {
         screen = new Screen();
         add(screen);
         Repository.getRepository().addPropertyChangeListener(screen);
-        Thread t = new Thread(new BoxGenerator());
+        Thread t = new Thread(new BoxBuilder());
         t.start();
     }
     public static void main(String [] args) {
@@ -18,23 +16,5 @@ public class Main extends JFrame {
         main.setVisible(true);
         main.setSize(300,200);
         main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-}
-import java.awt.*;
-public class Box {
-    private int x, y, width, height;
-    private Color color;
-
-    Box(int x, int y, int width, int height, Color color) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.color = color;
-    }
-
-    public void draw(Graphics g) {
-        g.setColor(color);
-        g.fillRect(x, y, width, height);
     }
 }

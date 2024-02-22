@@ -1,7 +1,7 @@
 import java.beans.PropertyChangeSupport;
-import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
 
-public class Repository extends Observable {
+public class Repository extends PropertyChangeSupport {
     private static Repository instance;
     private ArrayList<Box> boxes;
     private Repository() {
@@ -19,7 +19,7 @@ public class Repository extends Observable {
     }
     public void addABox(Box box) {
         boxes.add(box);
-        firePropertyChange("boxes",null,box)
+        firePropertyChange("boxes",null,box);
     }
 
 }

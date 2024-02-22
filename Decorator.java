@@ -7,7 +7,7 @@ abstract class Decorator extends Component{
     }
 
     @Override
-    public void operation(){
+    public void draw(){
         if (component != null){
             component.draw();
         }
