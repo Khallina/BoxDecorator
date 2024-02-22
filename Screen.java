@@ -1,0 +1,22 @@
+import javax.swing.*;
+import java.awt.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+
+public class Screen extends JPanel implements PropertyChangeListener {
+
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        ArrayList<Box> shapes = new ArrayList<Box>();
+        shapes = Repository.getRepository().getBoxes();
+        for(Box shape:shapes) {
+            shape.draw(g);
+        }
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
+        repaint();
+    }
+}
