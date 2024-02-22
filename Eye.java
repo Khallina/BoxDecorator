@@ -1,21 +1,17 @@
 import java.awt.*;
-/*
+
 public class Eye extends Decorator {
     private int x, y;
 
-    Eye(int x, int y) {
-        this.x = x;
-        this.y = y;
-        this.color = color;
+    Eye() {
     }
 
     public void draw(Graphics g) {
         super.draw();
         g.setColor(Color.WHITE);
-        g.fillOval(x, y, 8, 8);
+        g.fillOval(super.getX()+2, super.getY()+2, 8, 8);
         g.setColor(Color.BLACK);
-        g.fillOval(x, y, 4, 4);
+        g.fillOval(super.getX()+2, super.getY()+2, 4, 4);
     }
 }
 }
-*/

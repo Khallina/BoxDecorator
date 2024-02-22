@@ -1,5 +1,5 @@
 import java.awt.*;
-public class Box {
+public class Box extends Component {
     private int x, y, width, height;
     private Color color;
 
@@ -11,8 +11,17 @@ public class Box {
         this.color = color;
     }
 
+    @Override
     public void draw(Graphics g) {
         g.setColor(color);
         g.fillRect(x, y, width, height);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 }

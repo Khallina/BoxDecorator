@@ -3,10 +3,10 @@ import java.util.ArrayList;
 
 public class Repository extends PropertyChangeSupport {
     private static Repository instance;
-    private ArrayList<Box> boxes;
+    private ArrayList<Component> components;
     private Repository() {
         super(new Object());
-        boxes = new ArrayList<Box>();
+        components = new ArrayList<Component>();
     }
     public static Repository getRepository() {
         if (instance == null) {
@@ -14,12 +14,12 @@ public class Repository extends PropertyChangeSupport {
         }
         return instance;
     }
-    public ArrayList<Box> getBoxes() {
-        return boxes;
+    public ArrayList<Component> getComponents() {
+        return components;
     }
     public void addABox(Box box) {
-        boxes.add(box);
-        firePropertyChange("boxes",null,box);
+        components.add(box);
+        firePropertyChange("components",null,box);
     }
 
 }

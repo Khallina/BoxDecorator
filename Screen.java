@@ -8,10 +8,10 @@ public class Screen extends JPanel implements PropertyChangeListener {
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        ArrayList<Box> shapes = new ArrayList<Box>();
-        shapes = Repository.getRepository().getBoxes();
-        for(Box shape:shapes) {
-            shape.draw(g);
+        ArrayList<Component> shapes = new ArrayList<Component>();
+        shapes = Repository.getRepository().getComponents();
+        for(Component shape : shapes) {
+            shape.draw();
         }
     }
 

@@ -11,7 +11,7 @@ public class BoxBuilder implements Runnable {
             int green = (int) (Math.random()*255);
             int blue = (int) (Math.random()*255);
             Box box = new Box(x,y,width,height,new Color(red,green,blue));
-       //     Eye eye = new Eye();
+            Eye eye = new Eye();
        //     eye.add(box);
         //    Repository.getRepository().addABox(eye);
             Repository.getRepository().addABox(box);
