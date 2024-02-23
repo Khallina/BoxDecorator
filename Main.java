@@ -1,5 +1,9 @@
 import javax.swing.*;
-
+/*
+Katie Hallinan
+Yud Wong
+Adya Choudhary
+ */
 public class Main extends JFrame {
     Screen screen;
     public Main() {
