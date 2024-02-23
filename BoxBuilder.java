@@ -12,9 +12,9 @@ public class BoxBuilder implements Runnable {
             int blue = (int) (Math.random()*255);
             Box box = new Box(x,y,width,height,new Color(red,green,blue));
             Eye eye = new Eye();
-       //     eye.add(box);
-        //    Repository.getRepository().addABox(eye);
-            Repository.getRepository().addABox(box);
+            eye.add(box);
+            Repository.getRepository().addABox(eye);
+         //   Repository.getRepository().addABox(box);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

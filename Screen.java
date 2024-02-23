@@ -11,7 +11,7 @@ public class Screen extends JPanel implements PropertyChangeListener {
         ArrayList<Component> shapes = new ArrayList<Component>();
         shapes = Repository.getRepository().getComponents();
         for(Component shape : shapes) {
-            shape.draw();
+            shape.draw(g);
         }
     }
 

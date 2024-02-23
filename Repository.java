@@ -17,9 +17,9 @@ public class Repository extends PropertyChangeSupport {
     public ArrayList<Component> getComponents() {
         return components;
     }
-    public void addABox(Box box) {
-        components.add(box);
-        firePropertyChange("components",null,box);
+    public void addABox(Component component) {
+        components.add(component);
+        firePropertyChange("component",null, component);
     }
 
 }
